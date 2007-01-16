@@ -1,0 +1,51 @@
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x autom4te.cache -x '*compile' -x Makefile.in.in -x 'intltool*.in' -x 'xml-i18n-*.in' -x '*.pyc' -x '*.mo' -x '*.gmo' -x ABOUT-NLS -x Makevars.template -x COPYING -x INSTALL -x mdate-sh -x '*.orig' -x '*.rej' -x '*~' -x '*.temp' -x texinfo.tex -x ylwrap -x Makefile.in -x makefile.in -x configure -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x omf.make -x xmldocs.make origsrc/libsamplerate-0.1.2/examples/audio_out.c src/libsamplerate-0.1.2/examples/audio_out.c
+--- origsrc/libsamplerate-0.1.2/examples/audio_out.c	2004-09-11 22:19:07.000000000 -0500
++++ src/libsamplerate-0.1.2/examples/audio_out.c	2007-01-15 22:53:04.178543100 -0600
+@@ -41,7 +41,7 @@
+ **	Linux/OSS functions for playing a sound.
+ */
+ 
+-#if defined (__linux__)
++#if defined (__linux__) || defined(__CYGWIN__)
+ 
+ #include <fcntl.h>
+ #include <sys/ioctl.h>
+@@ -710,7 +710,7 @@
+ AUDIO_OUT *
+ audio_open (int channels, int samplerate)
+ {
+-#if defined (__linux__)
++#if defined (__linux__) || defined (__CYGWIN__)
+ 	return linux_open (channels, samplerate) ;
+ #elif (defined (__MACH__) && defined (__APPLE__))
+ 	return macosx_open (channels, samplerate) ;
+@@ -748,7 +748,7 @@
+ 		return ;
+ 		} ;
+ 
+-#if defined (__linux__)
++#if defined (__linux__) || defined (__CYGWIN__)
+ 	linux_play (callback, audio_out, callback_data) ;
+ #elif (defined (__MACH__) && defined (__APPLE__))
+ 	macosx_play (callback, audio_out, callback_data) ;
+@@ -769,7 +769,7 @@
+ void
+ audio_close (AUDIO_OUT *audio_out)
+ {
+-#if defined (__linux__)
++#if defined (__linux__) || defined (__CYGWIN__)
+ 	linux_close (audio_out) ;
+ #elif (defined (__MACH__) && defined (__APPLE__))
+ 	macosx_close (audio_out) ;
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x autom4te.cache -x '*compile' -x Makefile.in.in -x 'intltool*.in' -x 'xml-i18n-*.in' -x '*.pyc' -x '*.mo' -x '*.gmo' -x ABOUT-NLS -x Makevars.template -x COPYING -x INSTALL -x mdate-sh -x '*.orig' -x '*.rej' -x '*~' -x '*.temp' -x texinfo.tex -x ylwrap -x Makefile.in -x makefile.in -x configure -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x omf.make -x xmldocs.make origsrc/libsamplerate-0.1.2/src/Makefile.am src/libsamplerate-0.1.2/src/Makefile.am
+--- origsrc/libsamplerate-0.1.2/src/Makefile.am	2004-07-17 21:57:35.000000000 -0500
++++ src/libsamplerate-0.1.2/src/Makefile.am	2007-01-15 22:42:43.600156700 -0600
+@@ -14,7 +14,7 @@
+ SRC_SOURCES = samplerate.c src_sinc.c $(COEFF_HDRS) src_zoh.c src_linear.c
+ 
+ libsamplerate_la_SOURCES = $(SRC_SOURCES) $(noinst_HEADERS)
+-libsamplerate_la_LDFLAGS = -version-info @SHARED_VERSION_INFO@ @SHLIB_VERSION_ARG@
++libsamplerate_la_LDFLAGS = -version-info @SHARED_VERSION_INFO@ @SHLIB_VERSION_ARG@ -no-undefined
+ libsamplerate_la_LIBADD  = -lm
+ 
+ #-------------------------------------------------------------------------------

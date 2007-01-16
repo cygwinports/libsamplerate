@@ -1,0 +1,96 @@
+libsamplerate
+------------------------------------------
+libsamplerate is a Sample Rate Converter for audio. One example of where 
+such a thing would be useful is converting audio from the CD sample rate 
+of 44.1kHz to the 48kHz sample rate used by DAT players.
+
+Runtime requirements:
+  cygwin-1.5.23-2
+  libsndfile1-1.0.17-1
+
+Build requirements:
+(besides corresponding -devel packages)
+  cygwin-1.5.23-2
+  autoconf2.5-2.60-2
+  automake1.9-1.9.6-2
+  binutils-20060817-1
+  cygport-0.2.8-1
+  gawk-3.1.5-4
+  gcc-core-3.4.4-3
+  libtool1.5-1.5.23a-2
+  make-3.81-1
+  pkg-config-0.21-1
+  sed-4.1.5-2
+
+Canonical website:
+  http://www.mega-nerd.com/SRC/
+
+Canonical download:
+  http://www.mega-nerd.com/SRC/download.html
+
+Licence:
+  GPL-2
+
+Language:
+  C
+
+-------------------------------------------
+
+Build instructions:
+  unpack libsamplerate-0.1.2-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./libsamplerate-0.1.2-X.cygport all
+
+This will create:
+  /usr/src/libsamplerate-0.1.2-X-src.tar.bz2
+  /usr/src/libsamplerate-0.1.2-X.tar.bz2
+  /usr/src/libsamplerate-devel-0.1.2-X.tar.bz2
+  /usr/src/libsamplerate0-0.1.2-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+(libsamplerate)
+  /usr/bin/sndfile-resample.exe
+  /usr/share/doc/Cygwin/libsamplerate-0.1.2.README
+  /usr/share/doc/libsamplerate-0.1.2/AUTHORS
+  /usr/share/doc/libsamplerate-0.1.2/COPYING
+  /usr/share/doc/libsamplerate-0.1.2/ChangeLog
+  /usr/share/doc/libsamplerate-0.1.2/INSTALL
+  /usr/share/doc/libsamplerate-0.1.2/NEWS
+  /usr/share/doc/libsamplerate-0.1.2/README
+  /usr/share/doc/libsamplerate-0.1.2/html/SRC.css
+  /usr/share/doc/libsamplerate-0.1.2/html/SRC.png
+  /usr/share/doc/libsamplerate-0.1.2/html/api.html
+  /usr/share/doc/libsamplerate-0.1.2/html/download.html
+  /usr/share/doc/libsamplerate-0.1.2/html/faq.html
+  /usr/share/doc/libsamplerate-0.1.2/html/history.html
+  /usr/share/doc/libsamplerate-0.1.2/html/index.html
+  /usr/share/doc/libsamplerate-0.1.2/html/license.html
+  /usr/share/doc/libsamplerate-0.1.2/html/lists.html
+  /usr/share/doc/libsamplerate-0.1.2/html/quality.html
+  /usr/share/doc/libsamplerate-0.1.2/html/win32.html
+
+(libsamplerate0)
+  /usr/bin/cygsamplerate-0.dll
+
+(libsamplerate-devel)
+  /usr/include/samplerate.h
+  /usr/lib/libsamplerate.a
+  /usr/lib/libsamplerate.dll.a
+  /usr/lib/libsamplerate.la
+  /usr/lib/pkgconfig/samplerate.pc
+
+------------------
+
+Port Notes:
+
+----- version 0.1.2-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
