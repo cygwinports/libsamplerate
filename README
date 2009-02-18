@@ -37,17 +37,17 @@ Language:
 -------------------------------------------
 
 Build instructions:
-  unpack libsamplerate-0.1.2-X-src.tar.bz2
+  unpack libsamplerate-0.1.7-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./libsamplerate-0.1.2-X.cygport all
+  cygport ./libsamplerate-0.1.7-X.cygport all
 
 This will create:
-  /usr/src/libsamplerate-0.1.2-X-src.tar.bz2
-  /usr/src/libsamplerate-0.1.2-X.tar.bz2
-  /usr/src/libsamplerate-devel-0.1.2-X.tar.bz2
-  /usr/src/libsamplerate0-0.1.2-X.tar.bz2
+  /usr/src/libsamplerate-0.1.7-X-src.tar.bz2
+  /usr/src/libsamplerate-0.1.7-X.tar.bz2
+  /usr/src/libsamplerate-devel-0.1.7-X.tar.bz2
+  /usr/src/libsamplerate0-0.1.7-X.tar.bz2
 
 -------------------------------------------
 
@@ -55,24 +55,23 @@ Files included in the binary package:
 
 (libsamplerate)
   /usr/bin/sndfile-resample.exe
-  /usr/share/doc/Cygwin/libsamplerate-0.1.2.README
-  /usr/share/doc/libsamplerate-0.1.2/AUTHORS
-  /usr/share/doc/libsamplerate-0.1.2/COPYING
-  /usr/share/doc/libsamplerate-0.1.2/ChangeLog
-  /usr/share/doc/libsamplerate-0.1.2/INSTALL
-  /usr/share/doc/libsamplerate-0.1.2/NEWS
-  /usr/share/doc/libsamplerate-0.1.2/README
-  /usr/share/doc/libsamplerate-0.1.2/html/SRC.css
-  /usr/share/doc/libsamplerate-0.1.2/html/SRC.png
-  /usr/share/doc/libsamplerate-0.1.2/html/api.html
-  /usr/share/doc/libsamplerate-0.1.2/html/download.html
-  /usr/share/doc/libsamplerate-0.1.2/html/faq.html
-  /usr/share/doc/libsamplerate-0.1.2/html/history.html
-  /usr/share/doc/libsamplerate-0.1.2/html/index.html
-  /usr/share/doc/libsamplerate-0.1.2/html/license.html
-  /usr/share/doc/libsamplerate-0.1.2/html/lists.html
-  /usr/share/doc/libsamplerate-0.1.2/html/quality.html
-  /usr/share/doc/libsamplerate-0.1.2/html/win32.html
+  /usr/share/doc/libsamplerate-0.1.7/AUTHORS
+  /usr/share/doc/libsamplerate-0.1.7/COPYING
+  /usr/share/doc/libsamplerate-0.1.7/ChangeLog
+  /usr/share/doc/libsamplerate-0.1.7/INSTALL
+  /usr/share/doc/libsamplerate-0.1.7/NEWS
+  /usr/share/doc/libsamplerate-0.1.7/README
+  /usr/share/doc/libsamplerate-0.1.7/html/SRC.css
+  /usr/share/doc/libsamplerate-0.1.7/html/SRC.png
+  /usr/share/doc/libsamplerate-0.1.7/html/api.html
+  /usr/share/doc/libsamplerate-0.1.7/html/download.html
+  /usr/share/doc/libsamplerate-0.1.7/html/faq.html
+  /usr/share/doc/libsamplerate-0.1.7/html/history.html
+  /usr/share/doc/libsamplerate-0.1.7/html/index.html
+  /usr/share/doc/libsamplerate-0.1.7/html/license.html
+  /usr/share/doc/libsamplerate-0.1.7/html/lists.html
+  /usr/share/doc/libsamplerate-0.1.7/html/quality.html
+  /usr/share/doc/libsamplerate-0.1.7/html/win32.html
 
 (libsamplerate0)
   /usr/bin/cygsamplerate-0.dll
@@ -87,6 +86,9 @@ Files included in the binary package:
 ------------------
 
 Port Notes:
+
+----- version 0.1.7-1 -----
+Version bump.
 
 ----- version 0.1.2-1 -----
 Initial release for Cygwin.

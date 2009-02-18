@@ -1,5 +1,5 @@
 category: Audio
-requires: cygwin
+requires: cygwin libsamplerate0
 external-source: libsamplerate
 sdesc: "Sample rate converter library (development)"
 ldesc: "libsamplerate is a Sample Rate Converter for audio. One example 

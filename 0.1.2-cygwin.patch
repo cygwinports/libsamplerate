@@ -36,14 +36,3 @@
  	linux_close (audio_out) ;
  #elif (defined (__MACH__) && defined (__APPLE__))
  	macosx_close (audio_out) ;
---- origsrc/libsamplerate-0.1.2/src/Makefile.am	2004-07-17 21:57:35.000000000 -0500
-+++ src/libsamplerate-0.1.2/src/Makefile.am	2007-01-15 22:42:43.600156700 -0600
-@@ -14,7 +14,7 @@
- SRC_SOURCES = samplerate.c src_sinc.c $(COEFF_HDRS) src_zoh.c src_linear.c
- 
- libsamplerate_la_SOURCES = $(SRC_SOURCES) $(noinst_HEADERS)
--libsamplerate_la_LDFLAGS = -version-info @SHARED_VERSION_INFO@ @SHLIB_VERSION_ARG@
-+libsamplerate_la_LDFLAGS = -version-info @SHARED_VERSION_INFO@ @SHLIB_VERSION_ARG@ -no-undefined
- libsamplerate_la_LIBADD  = -lm
- 
- #-------------------------------------------------------------------------------
