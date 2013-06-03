@@ -1,0 +1,22 @@
+NAME="libsamplerate"
+VERSION=0.1.8
+RELEASE=1
+CATEGORY="Audio"
+SUMMARY="Sample rate converter library"
+DESCRIPTION="libsamplerate is a Sample Rate Converter for audio. One example
+of where such a thing would be useful is converting audio from the CD sample
+rate of 44.1kHz to the 48kHz sample rate used by DAT players."
+DESCRIPTION="Sample rate converter library"
+HOMEPAGE="http://www.mega-nerd.com/SRC/"
+SRC_URI="http://www.mega-nerd.com/SRC/${NAME}-${VERSION}.tar.gz"
+PATCH_URI="0.1.2-cygwin.patch"
+
+PKG_NAMES="${NAME} ${NAME}0 ${NAME}-devel"
+libsamplerate_SUMMARY="${SUMMARY% *} utilities"
+libsamplerate_CONTENTS='usr/bin/*.exe usr/share/'
+libsamplerate0_CONTENTS='usr/bin/*.dll'
+libsamplerate_devel_CONTENTS='usr/include/ usr/lib/'
+
+ACLOCAL_FLAGS="-I M4"
+
+HTMLDOCS="doc/*.html doc/*.png doc/*.css"
